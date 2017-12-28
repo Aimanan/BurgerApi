@@ -1,0 +1,53 @@
+{
+    "id": 1,
+    "name": "MacBurger",
+    "tagline": "Beef",
+    "first_brewed": "12/2014",
+    "image_url": "https://vignette.wikia.nocookie.net/logosfake/images/4/4c/Mcdonalds-Cheeseburger.png",
+    "abv": 12.7,
+    "ibu": 85,
+    "target_fg": 1038,
+    "target_og": 1113.5,
+    "ebc": 250,
+    "srm": 125,
+    "ph": 5.2,
+    "attenuation_level": 76.8,
+    "ingredients": {
+      "beef": [
+        {
+          "name": "Romanian",
+          "amount": {
+            "value": 0.1,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Cheese",
+          "amount": {
+            "value": 0.1,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Bread",
+          "amount": {
+            "value": 0.125,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Cola",
+          "amount": {
+            "value": 250,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ]
+    },
+    "contributed_by": "Google serach"
+  }
+  

@@ -1,5 +1,5 @@
 {
-  "name": "vagrant-story-js",
+  "name": "burger-app-js",
   "version": "1.0.0",
   "description": "Endless music",
   "main": "index.js",
@@ -8,14 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xenoleth/Envisioned.git"
+    "url": "git+https://github.com/Aimanan/BurgerApi.git"
   },
-  "author": "Xenoleth",
+  "author": "Aimanan",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Xenoleth/Envisioned/issues"
-  },
-  "homepage": "https://github.com/Xenoleth/Envisioned#readme",
+  "homepage": "https://github.com/Aimanan/BurgerApi#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",

@@ -1,0 +1,53 @@
+{
+    "id": 1,
+    "name": "Huge Burger",
+    "tagline": "Pork",
+    "first_brewed": "12/2014",
+    "image_url": "http://www.burgerstreet.com/burger_final/double_doubleExp.png",
+    "abv": 9.2,
+    "ibu": 65,
+    "target_fg": 1012,
+    "target_og": 1069,
+    "ebc": 60,
+    "srm": 30,
+    "ph": 4.2,
+    "attenuation_level": 82.6,
+    "ingredients": {
+      "pork": [
+        {
+          "name": "Argentinian",
+          "amount": {
+            "value": 0.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Cedar",
+          "amount": {
+            "value": 0.2,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Bread",
+          "amount": {
+            "value": 0.250,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Beer",
+          "amount": {
+            "value": 500,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ]
+    },
+    "contributed_by": "Google serach"
+  }
+  
