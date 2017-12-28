@@ -1,0 +1,43 @@
+{
+  "name": "vagrant-story-js",
+  "version": "1.0.0",
+  "description": "Endless music",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xenoleth/Envisioned.git"
+  },
+  "author": "Xenoleth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xenoleth/Envisioned/issues"
+  },
+  "homepage": "https://github.com/Xenoleth/Envisioned#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-boom": "^2.0.0",
+    "express-rate-limit": "^2.11.0",
+    "express-session": "^1.15.5",
+    "express-validator": "^4.3.0",
+    "gosquared": "^3.1.0",
+    "handlebars": "^4.0.11",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.20.1",
+    "mongodb": "^2.2.33",
+    "navigo": "^5.3.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.4.5",
+    "systemjs": "^0.20.19",
+    "systemjs-plugin-babel": "0.0.25",
+    "systemjs-plugin-text": "0.0.11",
+    "unique-random-array": "^1.0.0"
+  }
+}
