@@ -1,0 +1,5 @@
+{
+	"undefined": "localhost/burger-db",
+	"dev": "localhost/burger-db",
+	"prod": "localhost/burger-db"
+}

@@ -14,26 +14,23 @@ const init = (data) => {
     // Config application
     sentry.config(); 
     app.use(sentry.reqHandler());   
-    //app.use(require('helmet')());
-    app.use(require('express-validator')());
-    app.use('/', useCors(), rateLimit, require('./routers/test.rout'));
-    app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
-    
-    //app.use(sentry.errHandler())
-    app.use(cors());
+    app.use(require('helmet')());
+    app.use(require('express-validator')());   
+    app.use(sentry.errHandler());
+    //app.use(cors());
+    app.set('view engine', 'pug');
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-    
-    //require('../config/auth.config')(app, data);
-
-    //app.use('/static', express.static(path.join(__dirname, '../../client')));
     app.use('/libs', express.static(path.join(__dirname, '../../node_modules')));
 
     // add routers
-    require('./routers').attachTo(app, data);
+    //require('./routers/test.rout').attachTo(app, data);
     //app.use('/test', useCors(), rateLimit, require('./routers/index'))
+    app.use('/', useCors(), rateLimit, require('./routers/test.rout'));
+    app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
 
     return Promise.resolve(app);
 };
 
 module.exports = { init };
+

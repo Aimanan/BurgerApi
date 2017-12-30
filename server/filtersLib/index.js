@@ -13,12 +13,12 @@ exports.random = () => {
   return [randomBurger()];
 }
 
-exports.Burger = (id) => {
+exports.burger = (id) => {
   const chosenBurger = idFilter(id, sortedDb);
 
   return chosenBurger;
 }
 
-exports.Burgers = (options = {}) => {
+exports.burgers = (options = {}) => {
   return filters(sortedDb, options);
 }

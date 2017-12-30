@@ -1,4 +1,4 @@
-{
+[{
     "id": 1,
     "name": "MacBurger",
     "tagline": "Beef",
@@ -49,5 +49,5 @@
       ]
     },
     "contributed_by": "Google serach"
-  }
+  }]
   

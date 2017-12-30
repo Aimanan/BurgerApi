@@ -1,4 +1,4 @@
-{
+[{
     "id": 1,
     "name": "Burger with french fries",
     "tagline": "Pork",
@@ -56,5 +56,5 @@
       ]
     },
     "contributed_by": "Google serach"
-  }
+  }]
   
