@@ -3,10 +3,10 @@ const router = express.Router();
 
 const { Router } = require('express');
 var path = require('path');
-
 router.get('/burgers/random', require('../api/random'));
 router.get('/burgers/:burgerId', require('../api/burger'));
-router.get('/burgers', require('../api/burgers'));
+//router.get('/burgers', require('../routers/add.router/index')); 
+router.get('/burgers', require('../api/burger')); 
 //router1.get('/', require('../../../client/index.html'));
 //router1.get('/', require('../../../client/index.html'));
 // router1.get('/', (req, res) => {

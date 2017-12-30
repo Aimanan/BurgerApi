@@ -3,6 +3,13 @@ class MealsController {
         this.data = data;
     }  
 
+    getForm(req, res) {
+        return Promise.resolve()
+            .then(() => {
+                return res.render('meals/form');
+            });
+    }
+
     create(req, res) {
         const meal = req.body;
 

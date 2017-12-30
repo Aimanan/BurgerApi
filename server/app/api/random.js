@@ -3,6 +3,7 @@ const trackEvent = require('../../lib/trackEvent');
 ;
 function random (req, res) {
  const randomBurger = filtersLib.random();
+ console.log(filtersLib.random());
 
   trackEvent(`API - /burgers/random`);
   res.status(200);
