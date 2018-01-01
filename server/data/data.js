@@ -1,9 +1,9 @@
-//const UserData = require('./users.data');
+const BurgerData = require('./burger.data');
 //const PostData = require('./posts.data');
 
 const init = (db) => {
     return Promise.resolve({
-        //users: new UserData(db),
+        burgers: new BurgerData(db),
         //posts: new PostData(db)
     });
 };

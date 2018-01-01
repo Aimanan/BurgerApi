@@ -7,6 +7,7 @@ const sentry = require('../lib/sentry');
 const useCors = require('../lib/cors');
 const rateLimit = require('../lib/rateLimit');
 const { errorHandler, notFoundError } = require('../lib/errorHandler');
+const favicon = require('serve-favicon');
 
 const init = (data) => {
     const app = express();
@@ -17,7 +18,7 @@ const init = (data) => {
     app.use(require('helmet')());
     app.use(require('express-validator')());   
     app.use(sentry.errHandler());
-    //app.use(cors());
+    app.use(cors());
     app.set('view engine', 'pug');
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,11 +27,15 @@ const init = (data) => {
     // add routers
     //require('./routers/test.rout').attachTo(app, data);
     //app.use('/test', useCors(), rateLimit, require('./routers/index'))
-    app.use('/', useCors(), rateLimit, require('./routers/test.rout'));
-    app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
+    app.use(favicon(path.join(__dirname,'../../client/images/favicon.png')));
+    //app.use('/', useCors(), rateLimit, require('./routers/test.rout'));
+    app.use('/', rateLimit);
+    require('./routers/multirouter').attachTo(app, data);
+    //app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
 
     return Promise.resolve(app);
 };
 
 module.exports = { init };
+
 

@@ -6,7 +6,7 @@ var path = require('path');
 router.get('/burgers/random', require('../api/random'));
 router.get('/burgers/:burgerId', require('../api/burger'));
 //router.get('/burgers', require('../routers/add.router/index')); 
-router.get('/burgers', require('../api/burger')); 
+router.get('/', require('../api/burger')); 
 //router1.get('/', require('../../../client/index.html'));
 //router1.get('/', require('../../../client/index.html'));
 // router1.get('/', (req, res) => {
@@ -16,4 +16,3 @@ router.get('/burgers', require('../api/burger'));
 //app.use('/', router1);
 
 module.exports =router;
-
