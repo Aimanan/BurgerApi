@@ -34,8 +34,8 @@ const burgers=(options={}) => {
         .then(function () {
           const sortedDb = sortBy(burgers, ['id']);
           //const burgerByAbv = uniqueRandomArray(sortedDb);
-          console.log('here are the options---------------------------------------------------------------');
-          console.log(options);
+          // console.log('here are the options---------------------------------------------------------------');
+          // console.log(options);
           //console.log(filters(sortedDb, options));
           return filters(sortedDb, options);
 
@@ -43,9 +43,4 @@ const burgers=(options={}) => {
 
     }));
 };
-
-// function burgers (options={}){
-//   return filters(sortedDb, options);
-// };
-
 module.exports = { random, burgers };

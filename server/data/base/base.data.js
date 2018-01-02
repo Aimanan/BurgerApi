@@ -13,7 +13,7 @@ class BaseData {
     }
 
     create(model) {
-        // TODO: add validation
+        // TODO: a place for validation
 
         return this.collection.insert(model);
     }

@@ -3,7 +3,6 @@ const async = () => {
 };
 
 const config = require('./config');
-const http = require('http');
 const https = require('https');
 const fs = require('fs');
 
@@ -12,9 +11,12 @@ async()
     .then((db) => require('./data').init(db))
     .then((data) => require('./app').init(data))
     .then((app) => {
-        https.createServer({
-            key: fs.readFileSync('./server/system/certificate/ia.key'),
-            cert: fs.readFileSync('./server/system/certificate/ia.crt')
-          }, app).listen(config.port, () => console.log(`Take a burger at port ${config.port}`));   
-        //app.listen(config.port, () => console.log(`Take a burger at port ${config.port}`));         
+        // https.createServer({
+        //     key: fs.readFileSync('./server/system/certificate/ia.key'),
+        //     cert: fs.readFileSync('./server/system/certificate/ia.crt')
+        //   }, app).listen(config.port, () => console.log(`Take a burger at port ${config.port}`)); 
+
+        // I failed to validate the SSL certificate. Use the upper rows for unsecured https connection
+
+        app.listen(config.port, () => console.log(`Take a burger at port ${config.port}`));         
     });
