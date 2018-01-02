@@ -12,9 +12,9 @@ async()
     .then((db) => require('./data').init(db))
     .then((data) => require('./app').init(data))
     .then((app) => {
-        // https.createServer({
-        //     key: fs.readFileSync('./server/system/certificate/ia.key'),
-        //     cert: fs.readFileSync('./server/system/certificate/ia.crt')
-        //   }, app).listen(config.port, () => console.log(`Take a burger at port ${config.port}`));   
-        app.listen(config.port, () => console.log(`Take a burger at port ${config.port}`));         
+        https.createServer({
+            key: fs.readFileSync('./server/system/certificate/ia.key'),
+            cert: fs.readFileSync('./server/system/certificate/ia.crt')
+          }, app).listen(config.port, () => console.log(`Take a burger at port ${config.port}`));   
+        //app.listen(config.port, () => console.log(`Take a burger at port ${config.port}`));         
     });

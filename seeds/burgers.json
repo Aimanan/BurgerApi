@@ -1,0 +1,165 @@
+[{
+    "id": 1,
+    "name": "MacBurger",
+    "tagline": "Beef",
+    "first_brewed": "12/2014",
+    "image_url": "https://vignette.wikia.nocookie.net/logosfake/images/4/4c/Mcdonalds-Cheeseburger.png",
+    "abv": 12.7,
+    "ibu": 85,
+    "target_fg": 1038,
+    "target_og": 1113.5,
+    "ebc": 250,
+    "srm": 125,
+    "ph": 5.2,
+    "attenuation_level": 76.8,
+    "ingredients": {
+      "beef": [
+        {
+          "name": "Romanian",
+          "amount": {
+            "value": 0.1,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Cheese",
+          "amount": {
+            "value": 0.1,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Bread",
+          "amount": {
+            "value": 0.125,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Cola",
+          "amount": {
+            "value": 250,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ]
+    },
+    "contributed_by": "Google serach"
+  },
+  {
+    "id": 1,
+    "name": "Huge Burger",
+    "tagline": "Pork",
+    "first_brewed": "12/2014",
+    "image_url": "http://www.burgerstreet.com/burger_final/double_doubleExp.png",
+    "abv": 9.2,
+    "ibu": 65,
+    "target_fg": 1012,
+    "target_og": 1069,
+    "ebc": 60,
+    "srm": 30,
+    "ph": 4.2,
+    "attenuation_level": 82.6,
+    "ingredients": {
+      "pork": [
+        {
+          "name": "Argentinian",
+          "amount": {
+            "value": 0.3,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Cedar",
+          "amount": {
+            "value": 0.2,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Bread",
+          "amount": {
+            "value": 0.250,
+            "unit": "kilograms"
+          }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Beer",
+          "amount": {
+            "value": 500,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ]
+    },
+    "contributed_by": "Google serach"
+  },
+  {
+    "id": 1,
+    "name": "Burger with french fries",
+    "tagline": "Pork",
+    "first_brewed": "10/2004",
+    "image_url": "http://o.aolcdn.com/hss/storage/midas/d64dea18dbf9b98b4cee02107d3715cb/204111129/foodpairings.png",
+    "abv": 9.7,
+    "ibu": 100,
+    "target_fg": 1015,
+    "target_og": 1088,
+    "ebc": 30,
+    "srm": 15.3,
+    "ph": 4.4,
+ " attenuation_level": 23,
+    "ingredients": {
+      "pork": [
+        {
+          "name": "Bulgarian",
+          "amount": {
+            "value": 0.2,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Cedar",
+          "amount": {
+            "value": 0.2,
+            "unit": "kilograms"
+          }
+        },
+        {
+          "name": "Bread",
+          "amount": {
+            "value": 0.250,
+            "unit": "kilograms"
+          }
+        },
+        {
+         "name": "French fries",
+         "amount": {
+           "value": 0.250,
+           "unit": "kilograms"
+         }
+        }
+      ],
+      "hops": [
+        {
+          "name": "Zagorka",
+          "amount": {
+            "value": 500,
+            "unit": "grams"
+          },
+          "add": "start",
+          "attribute": "bitter"
+        }
+      ]
+    },
+    "contributed_by": "Google serach"
+  }
+]
+  
