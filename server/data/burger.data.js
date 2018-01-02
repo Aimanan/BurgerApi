@@ -1,10 +1,10 @@
 const BaseData = require('./base/base.data');
 const Burger = require('../models/burger');
 const { ObjectID } = require('mongodb');
-const sortBy = require('lodash/sortBy');
-const filter = require('lodash/filter');
-const curry = require('lodash/curry');
-const uniqueRandomArray = require('unique-random-array');
+// const sortBy = require('lodash/sortBy');
+// const filter = require('lodash/filter');
+// const curry = require('lodash/curry');
+// const uniqueRandomArray = require('unique-random-array');
 
 class BurgerData extends BaseData {
     constructor(db) {

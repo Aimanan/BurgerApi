@@ -1,0 +1,52 @@
+
+
+block content
+
+    form.form-group(action="/meals/form" method="POST" )
+        h3 Input a new burger
+        label(for='category')  Category
+        input.form-control#autocomplete(name="category" minlength = "1")
+        
+        br
+        label(for='name') name
+        input.form-control(name="name" required type="text" placeholder="Enter burger name" minlength = "1")
+        br
+        label(for='tagline') tagline
+        input.form-control(name="tagline" type="text" placeholder="Enter tagline")
+        br
+        label(for='description') description
+        input.form-control(name="description" type="text" placeholder="Enter meal description")
+        br
+        label(for='first_brewed') first_brewed
+        input.form-control(name="first_brewed" type="date")
+        br
+        label(for='image_url') image_url
+        input.form-control(name="image_url" type="text" placeholder="Enter image_url")
+        br
+        label(for='abv') abv
+        input.form-control(name="abv" type="number" placeholder="Enter abv (wtf is that?)")
+        br
+        label(for='ibu') ibu
+        input.form-control(name="ibu" type="number" placeholder="ibu")
+        br
+        label(for='target_fg') target_fg
+        input.form-control(name="target_fg" type="number" placeholder="target_fg")
+        br
+        label(for='target_og') target_og
+        input.form-control(name="target_og" type="number" placeholder="target_og")
+        br
+        label(for='ebc') ebc
+        input.form-control(name="ebc" type="number" placeholder="ebc")
+        br
+        label(for='srm') srm
+        input.form-control(name="srm" type="number" placeholder="srm")
+        br
+        label(for='ph') ph
+        input.form-control(name="ph" type="number" placeholder="ph")
+        br
+        label(for='ingredients') ingredients
+        input.form-control(name="ingredients" type="text" placeholder="ingredients")
+        br
+        
+        button.btn.btn-success
+            | Save
