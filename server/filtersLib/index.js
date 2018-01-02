@@ -6,11 +6,13 @@ const filters = require('./filters');
 const idFilter = require('./filters/id');
 const config = require('../config');
 
-//console.log(sortedDb+ "sortedDb");
+const filter = require('lodash/filter');
+const curry = require('lodash/curry');
+
 const random = () => {
   return Promise.resolve(db.init(config.conncetionString)
     .then(burgers => {
-      return burgers.collection('burger1')
+      return burgers.collection('burgers')
         .find({})
         .toArray()
         .then(burger => {
@@ -23,14 +25,27 @@ const random = () => {
   }));
 };
 
-module.exports = { random };
+const burgers=(options={}) => {
+  return Promise.resolve(db.init(config.conncetionString)
+    .then( burgers => {
+      return burgers.collection('burgers')
+        .find({})
+        .toArray()
+        .then(function () {
+          const sortedDb = sortBy(burgers, ['id']);
+          //const burgerByAbv = uniqueRandomArray(sortedDb);
+          console.log('here are the options---------------------------------------------------------------');
+          console.log(options);
+          //console.log(filters(sortedDb, options));
+          return filters(sortedDb, options);
 
-// exports.burger = (id) => {
-//   const chosenBurger = idFilter(id, sortedDb);
+        });
 
-//   return chosenBurger;
-// }
+    }));
+};
 
-// exports.burgers = (options = {}) => {
+// function burgers (options={}){
 //   return filters(sortedDb, options);
-// }
+// };
+
+module.exports = { random, burgers };

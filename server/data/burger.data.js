@@ -2,6 +2,8 @@ const BaseData = require('./base/base.data');
 const Burger = require('../models/burger');
 const { ObjectID } = require('mongodb');
 const sortBy = require('lodash/sortBy');
+const filter = require('lodash/filter');
+const curry = require('lodash/curry');
 const uniqueRandomArray = require('unique-random-array');
 
 class BurgerData extends BaseData {
@@ -9,11 +11,11 @@ class BurgerData extends BaseData {
         super(db, Burger);
     }
 
-    updateById(model) {
-        return this.collection.updateOne({
-            _id: model._id
-        }, model);
-    }
+    // updateById(model) {
+    //     return this.collection.updateOne({
+    //         _id: model._id
+    //     }, model);
+    // }
 
     findByBurgerName(burgername) {
         const burgerToLower = burgername.toLowerCase();
@@ -32,6 +34,11 @@ class BurgerData extends BaseData {
         return this.collection
             .findOne({ _id });
     }
+
+    // sortByABV (val, db) { 
+    //       if (val === null) return db;
+    //       return filter(db, (b) => b.abv > val);
+    // }
 
     _isModelValid(model) {
         // TODO: Add burger validation

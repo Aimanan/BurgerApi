@@ -34,7 +34,7 @@ function filters (db, opts) {
     burgerNameFilter(burger_name),
     hopsFilter(hops),
     idsFilter(ids)
-  )(db)
+  )(db);
 }
 
 module.exports = filters;

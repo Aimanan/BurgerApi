@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <div class="row">
-        <div class="col-lg-6">
-          <div class="input-group">
-            <span class="input-group-btn">
-                    <button type="button" class="btn btn-success">Submit</button>
-                  </span>
-                  <input type="text" class="form-control" placeholder="Your burger (in .json)">
-          </div>
-        </div>
+    <div >
+      <p>To run the app</p>
+      <p>Console 1: run "mongod"
+          Console 2: run "npm start" in root directory
+          Enter url "https://localhost:5500"</p>
+
+      <p>Functionality:</p>
+      <p> 1. Add a burger to the DB via .post request </p>
+      <p> 2. https://localhost:5500/burgers/random select a random burger </p>
+      <p> 3. https://localhost:5500/burgers get all burgers </p>
+      <p> 4. https://localhost:5500/burgers?name=BURGERNAME get a burger by name </p>
+      <p> 5. https://localhost:5500/burgers?page=2&per_page=3 pagination </p>
+
+      
     </div>
     
 </body>

@@ -25,13 +25,10 @@ const init = (data) => {
     app.use('/libs', express.static(path.join(__dirname, '../../node_modules')));
 
     // add routers
-    //require('./routers/test.rout').attachTo(app, data);
-    //app.use('/test', useCors(), rateLimit, require('./routers/index'))
     app.use(favicon(path.join(__dirname,'../../client/images/favicon.png')));
-    //app.use('/', useCors(), rateLimit, require('./routers/test.rout'));
     app.use('/', rateLimit);
     require('./routers/multirouter').attachTo(app, data);
-    //app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
+    app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
 
     return Promise.resolve(app);
 };

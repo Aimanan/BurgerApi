@@ -6,7 +6,7 @@ const gs = new GS({
 })
 
 function trackEvent (name) {
-  if (system.isDev()) return
+  if (system.isDev()) return;
   gs.trackEvent(name);
 }
 
