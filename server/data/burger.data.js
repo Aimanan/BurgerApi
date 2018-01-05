@@ -13,17 +13,14 @@ class BurgerData extends BaseData {
     //     }, model);
     // }
 
-    // findByBurgerName(burgername) {
+    // async findByBurgerName(burgername) {
     //     const burgerToLower = burgername.toLowerCase();
-
     //     const burger = this.collection.findOne({ burgername });
 
-    //     return new Promise((resolve, reject) => {
-    //         if (!burger) {
-    //             return reject('No such burger was found');
-    //         }
-    //         return resolve(burger);
-    //     });
+    //     if (!burger) {
+    //         return console.log('No such burger was found');
+    //     }
+    //     return burger;
     // }
 
     findById(_id) {

@@ -9,7 +9,7 @@ const rateLimit = require('../lib/rateLimit');
 const { errorHandler, notFoundError } = require('../lib/errorHandler');
 const favicon = require('serve-favicon');
 
-const init = (data) => {
+const init = async (data) => {
     const app = express();
 
     // Config application
@@ -30,7 +30,8 @@ const init = (data) => {
     require('./routers/multirouter').attachTo(app, data);
     app.use('*', (req, res, next) => next(notFoundError(`No endpoint found that matches '${req.originalUrl}'`)));
 
-    return Promise.resolve(app);
+    //return Promise.resolve(app); 
+    return await app;
 };
 
 module.exports = { init };
